@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import OwlCarousel from 'react-owl-carousel';
+import Testimoni from './Testimoni';
+// import OwlCarousel from 'react-owl-carousel';
 // import {Link} from 'react-router-dom';
 
 class Service extends Component{
@@ -107,7 +108,8 @@ class Service extends Component{
                 </div>
                 <div className="row">
                 <div className="col-lg-12">
-                    <OwlCarousel
+                    <Testimoni />
+                    {/* <OwlCarousel
                         className="review_part_text"
                         loop
                         autoplay
@@ -161,7 +163,7 @@ class Service extends Component{
                         you're thing, night darkness. Which itself stars creature.
                         </p>
                     </div>
-                    </OwlCarousel>
+                    </OwlCarousel> */}
                 </div>
                 </div>
             </div>

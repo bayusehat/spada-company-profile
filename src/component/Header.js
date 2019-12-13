@@ -47,7 +47,8 @@ class Header extends Component{
             ],
             activeLink : null,
             services : [],
-            banner : {}
+            banner : {},
+            testimonial : []
         }
     }
 

@@ -1,22 +1,22 @@
 
-// var cacheName = 'spada-worker-cache';
+var cacheName = 'spada-worker-cache';
 
-// const cacheFiles = [
-//   '/',
-//   '/manifest.json',
-//   '/ficon.ico',
-//   '/icon.png'
-// ];
+const cacheFiles = [
+  '/',
+  '/manifest.json',
+  '/ficon.ico',
+  '/icon.png'
+];
 
-// self.addEventListener('install', function(e) {
-//   console.log('[ServiceWorker] Installed');
-//   e.waitUntil(
-//     caches.open(cacheName).then(function(cache) {
-//     console.log('[ServiceWorker] Caching cacheFiles');
-//     return cache.addAll(cacheFiles);
-//     })
-//   ); // end e.waitUntil
-// });
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Installed');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+    console.log('[ServiceWorker] Caching cacheFiles');
+    return cache.addAll(cacheFiles);
+    })
+  ); // end e.waitUntil
+});
 
 // self.addEventListener('activate', event => {
 //   const currentCachelist = [cacheName];
@@ -33,31 +33,31 @@
 // });
 
 
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(
-//     caches.match(event.request)
-//       .then(function(response) {
-//         if (response) {
-//           return response;
-//         } else {
-//           return fetch(event.request)
-//             .then(function(res) {
-//               return caches.open(cacheName)
-//                 .then(function(cache) {
-//                   cache.put(event.request.url, res.clone());
-//                   return res;
-//                 })
-//             })
-//             .catch(function(err) {
-//               return caches.open(cacheName)
-//                 .then(function(cache) {
-//                   return cache.match('./offline.html');
-//                 });
-//             });
-//           }
-//         })
-//       );
-//   });
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        } else {
+          return fetch(event.request)
+            .then(function(res) {
+              return caches.open(cacheName)
+                .then(function(cache) {
+                  cache.put(event.request.url, res.clone());
+                  return res;
+                })
+            })
+            .catch(function(err) {
+              return caches.open(cacheName)
+                .then(function(cache) {
+                  return cache.match('./offline.html');
+                });
+            });
+          }
+        })
+      );
+  });
 
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activated');

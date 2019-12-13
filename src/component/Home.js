@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
+import Testimoni from './Testimoni';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import axios from 'axios';
@@ -14,7 +15,7 @@ class Home extends Component{
     constructor(props){
         super(props);
         this.state = {
-            services : []
+            services : [],
         }
     }
 
@@ -241,61 +242,7 @@ class Home extends Component{
                 <div className="row">
                 <div className="col-lg-12">
                     {/* <div className="review_part_text owl-carousel"> */}
-                <OwlCarousel
-                        className="review_part_text"
-                        loop
-                        autoplay
-                        margin={5}
-                    >
-                    <div className="singler_eview_part">
-                        <div className="client_info">
-                        <img src="img/client_1.png" alt="" />
-                        <h4>Justine Miller</h4>
-                        <p>Web developer at Envato</p>
-                        </div>
-                        <p>
-                        “There winged grass midst moving earth seed herb fifth you
-                        multiply you divide cattle stars first cattle was had spirit
-                        you're thing, night darkness. Which itself stars creature.
-                        </p>
-                    </div>
-                    <div className="singler_eview_part">
-                        <div className="client_info">
-                        <img src="img/client_2.png" alt="" />
-                        <h4>Danny Jonson</h4>
-                        <p>Creative director at Apple</p>
-                        </div>
-                        <p>
-                        “There winged grass midst moving earth seed herb fifth you
-                        multiply you divide cattle stars first cattle was had spirit
-                        you're thing, night darkness. Which itself stars creature.
-                        </p>
-                    </div>
-                    <div className="singler_eview_part">
-                        <div className="client_info">
-                        <img src="img/client_1.png" alt="" />
-                        <h4>Justine Miller</h4>
-                        <p>Web developer at Envato</p>
-                        </div>
-                        <p>
-                        “There winged grass midst moving earth seed herb fifth you
-                        multiply you divide cattle stars first cattle was had spirit
-                        you're thing, night darkness. Which itself stars creature.
-                        </p>
-                    </div>
-                    <div className="singler_eview_part">
-                        <div className="client_info">
-                        <img src="img/client_2.png" alt="" />
-                        <h4>Danny Jonson</h4>
-                        <p>Creative director at Apple</p>
-                        </div>
-                        <p>
-                        “There winged grass midst moving earth seed herb fifth you
-                        multiply you divide cattle stars first cattle was had spirit
-                        you're thing, night darkness. Which itself stars creature.
-                        </p>
-                    </div>
-                    </OwlCarousel>
+                    <Testimoni />
                 </div>
                 </div>
             </div>
