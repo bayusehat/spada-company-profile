@@ -1,43 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="SPADA Company">
+    <meta name="apple-mobile-web-app-title" content="SPADA Company">
+    <meta name="theme-color" content="#0f3d73">
+    <meta name="msapplication-navbutton-color" content="#0f3d73">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="png" sizes="192x192" href="./ficon.ico">
+    <link rel="apple-touch-icon" type="png" sizes="192x192" href="./icon.png">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- CSS -->
+    <!-- <link rel="icon" href="img/favicon.png" /> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .menu_fixed{
+        background: #002f65;
+      }
+      .btn_1{
+        background: #ffba00;
+      }
+      .about_part .about_part_text h5 {
+        color: #002f65;
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    .our_project .project_menu_item .active {
+        color: #ffba00;
+    }
+    .our_project .more_btn_iner {
+      display: inline-block;
+      border: 1px solid #ffba00;
+      padding: 15px 40px;
+      color: #ffba00;
+      font-size: 15px;
+      text-transform: capitalize;
+      border-radius: 50px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+    }
+    .our_project .more_btn_iner:hover {
+      display: inline-block;
+      border: 1px solid transparent;
+      padding: 15px 40px;
+      color: #ffffff;
+      background: #002f65;
+      font-size: 15px;
+      text-transform: capitalize;
+      border-radius: 50px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+    }
+    .section_tittle p {
+      font-size: 16px;
+      color: #002f65;
+      text-transform: capitalize;
+      margin-bottom: 15px;
+    }
+    .main_menu .main-menu-item ul li .nav-link:visited{
+      color: #ffffff;
+    }
+    .main_menu .main-menu-item ul li .nav-link:hover{
+      color: #ffffff;
+    }
+    .main_menu .main-menu-item ul li .nav-link:before{
+      position: absolute;
+			content: "";
+		  left: 24px;
+			bottom: 30px;
+			width: 0;
+			height: 1px;
+			background-color: #ffba00;
+    }
+    .active{
+      font-weight: bold;
+    }
+    .our_project .project_menu_item ul li:hover{
+      color: #ffba00;
+      transition: 0.3s;
+    }
+    </style>
+    <title>SPADA Company</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+  <div id="root"></div>
+  <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+  <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+  <script src="js/jquery.magnific-popup.js"></script>
+    <!-- isotope js -->
+  <script src="js/isotope.pkgd.min.js"></script>
+    <!-- particles js -->
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('spada-worker.js').then(function(registration) {
+            console.log('Service Worker registration successful', registration.scope);
+          }, function(err) {
+            console.log('Service Worker registration failed', err);
+          }).catch(function(err) {
+            console.log(err);
+          });
+        });
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+  </script>
   </body>
 </html>

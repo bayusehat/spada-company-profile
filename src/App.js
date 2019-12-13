@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './component/Header';
+import Footer from './component/Footer';
+import ScrollToTop from './component/ScrollToTop';
+import {BrowserRouter as Router} from 'react-router-dom';
+import PageProgress from 'react-page-progress';
+// import Loader from 'react-loader-spinner';
+// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+
 import './App.css';
 
 function App() {
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="wrapper" className="home-page">
+      <Router>
+        <ScrollToTop/>
+        <PageProgress color={'skyblue'} height={5}/>
+        <Header />
+        <Footer />
+      </Router>
+      </div>
     </div>
   );
 }
