@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Testimoni from './Testimoni';
-// import OwlCarousel from 'react-owl-carousel';
-// import {Link} from 'react-router-dom';
 
 class Service extends Component{
     constructor(props){
@@ -47,16 +45,11 @@ class Service extends Component{
                             <div className="single_service">
                                 <span>{srv.serviceId}</span>
                                     <h4>
-                                    {srv.serviceName}
+                                        {srv.serviceName}
                                     </h4>
                                 <p>
                                     {srv.serviceDescription}
                                 </p>
-                                {/* <ul>
-                                    <li><a href="# ">Branding and Identity.</a></li>
-                                    <li><a href="# ">Mobile app</a></li>
-                                    <li><a href="# ">Web design</a></li>
-                                </ul> */}
                             </div>
                         </div>
                     </div>

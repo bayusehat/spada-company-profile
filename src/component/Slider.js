@@ -34,12 +34,6 @@ class Slider extends Component{
                 <section id="banner">
                     <Awsm cssModule={AwsmCss} bullets={false}>
                         {listBanner}
-                        {/* <div data-src="img/slides/2.jpg">
-                            <div className="flex-caption">
-                                <h3>Solution</h3> 
-                                <p>Success depends on work</p> 
-                            </div>
-                        </div> */}
                     </Awsm>
                 </section> 
             </>
