@@ -24,7 +24,7 @@ class Home extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost/service/home/3')
+        axios.get('http://localhost:8000/api/service')
             .then(res => {
                 this.setState({
                     services : res.data.result

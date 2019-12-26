@@ -3,7 +3,6 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 import ScrollToTop from './component/ScrollToTop';
 import {BrowserRouter as Router} from 'react-router-dom';
-import PageProgress from 'react-page-progress';
 // import Loader from 'react-loader-spinner';
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
@@ -16,7 +15,6 @@ function App() {
       <div id="wrapper" className="home-page">
       <Router>
         <ScrollToTop/>
-        <PageProgress color={'skyblue'} height={5}/>
         <Header />
         <Footer />
       </Router>

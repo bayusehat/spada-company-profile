@@ -12,7 +12,7 @@ class Slider extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost/banner')
+        axios.get('http://localhost:8000/api/banner')
             .then(res => {
                 this.setState({
                     banner : res.data.result

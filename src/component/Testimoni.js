@@ -13,7 +13,7 @@ class Testimoni extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost/testimoni')
+        axios.get('http://localhost:8000/api/testimoni')
             .then(res =>{
                 this.setState({
                     testimonis : res.data.result

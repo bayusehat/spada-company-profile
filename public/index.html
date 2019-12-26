@@ -101,6 +101,20 @@
       color: #ffba00;
       transition: 0.3s;
     }
+    @media(max-width: 991px){
+      .navbar-nav .align-items-center ul li{
+        color: #002f65;
+      }
+      .our_project .project_menu_item ul li:hover{
+        color: #ffba00;
+        transition: 0.3s;
+      }
+      .main_menu .main-menu-item ul li .nav-link:visited {
+          color: #002f65;
+      }
+
+    }
+    
     </style>
     <title>SPADA Company</title>
   </head>
@@ -126,10 +140,10 @@
   <script src="js/custom.js"></script>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script>
+  <!-- <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('spada-worker.js').then(function(registration) {
+          navigator.serviceWorker.register('./spada-worker.js').then(function(registration) {
             console.log('Service Worker registration successful', registration.scope);
           }, function(err) {
             console.log('Service Worker registration failed', err);
@@ -140,6 +154,17 @@
       } else {
         console.log('Service Worker is not supported by browser.');
       }
+  </script> -->
+  <script>
+    (function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(response => {
+          console.log('Service Worker registered.')
+        }).catch(error => {
+          console.error(error)
+        })
+      }
+    })()
   </script>
   </body>
 </html>

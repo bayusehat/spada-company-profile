@@ -25,7 +25,7 @@ class Gallery extends Component{
                 })
             })
         
-        axios.get('http://localhost/category')
+        axios.get('http://localhost:8000/api/category')
             .then(res => {
                 this.setState({ categories : res.data.result })
             })
@@ -33,7 +33,7 @@ class Gallery extends Component{
 
     showModal(event){
         event.preventDefault();
-        axios.get('http://localhost/product/')
+        axios.get('http://localhost:8000/api/product/')
             .then(res => {
                 this.setState({
                     portfolio : res.data.result
@@ -43,7 +43,7 @@ class Gallery extends Component{
 
     filterbyCategory(event, id){
         event.preventDefault();
-        axios.get('http://localhost/product/category/'+id)
+        axios.get('http://localhost:8000/api/product/category/'+id)
             .then(res => {
                 this.setState({
                     portfolio : res.data.result

@@ -7,6 +7,7 @@ import About from './About';
 import Service from './Service';
 import Contact from './Contact';
 import Work from './Work';
+import PageProgress from 'react-page-progress';
 // import axios from 'axios';
 class Header extends Component{
     constructor(props){
@@ -111,6 +112,7 @@ class Header extends Component{
                         </div>
                     </div>
                     </header>
+                <PageProgress color={'skyblue'} height={5}/>
                 <AnimatedSwitch
                     atEnter={{ opacity: 0 }}
                     atLeave={{ opacity: 0 }}
